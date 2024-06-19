@@ -1,12 +1,13 @@
 {
   "name": "api-product-nodejs",
   "version": "1.0.0",
-  "description": "",
+  "description": "Project in node.js for product management.",
   "main": "server.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "dev" : "node --watch --no-warnings server.js"
   },
   "keywords": [],
   "author": "",
