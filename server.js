@@ -1,9 +1,11 @@
-import { createServer } from 'node:http'
+import fastify from 'fastify';
 
-const server = createServer((request, response)=>{
-    response.write("Servidor ativo !");
+const server = fastify();
 
-    return response.end();
+server.get('/', () => {
+    return 'Servidor ativo !'
 });
 
-server.listen(3000);
+server.listen({
+    port: 3000,
+});
