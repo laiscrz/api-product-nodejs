@@ -3,22 +3,22 @@ import fastify from 'fastify';
 const server = fastify();
 
 //GET
-server.get('/produtos', () => {
+server.get('/products', () => {
     return 'Servidor ativo !'
 });
 
 // POST
-server.post('/produtos', () => {
+server.post('/products', () => {
     return 'Servidor ativo !'
 });
 
 // PUT
-server.put('/produtos/:id', () => {
+server.put('/products/:id', () => {
     return 'Servidor ativo !'
 });
 
 // DELETE
-server.delete('/produtos/:id', () => {
+server.delete('/products/:id', () => {
     return 'Servidor ativo !'
 });
 
