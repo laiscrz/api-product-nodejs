@@ -5,12 +5,12 @@
 <p align="center"><img src="http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge"/></p>
 
 ## 🛠️ Tecnologias Utilizadas
-- Node.js: Plataforma para construção de aplicações backend em JavaScript.
-- Fastify: Framework web para construção de APIs rápidas e eficientes em Node.js.
-- JavaScript (ES6+): Linguagem de programação para desenvolvimento web.
-- Git: Sistema de controle de versão distribuído.
-- GitHub: Plataforma de hospedagem de código-fonte e colaboração.
-
+- **Node.js:** Plataforma para construção de aplicações backend em JavaScript.
+- **Fastify:** Framework web para construção de APIs rápidas e eficientes em Node.js.
+- **JavaScript:** Linguagem de programação para desenvolvimento web.
+- **VSCode:** IDE utilizada para desenvolvimento.
+- **Git:** Sistema de controle de versão distribuído.
+- **GitHub:** Plataforma de hospedagem de código-fonte e colaboração.
 
 ## 🚀 Instalação
 
