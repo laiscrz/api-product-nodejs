@@ -2,7 +2,23 @@ import fastify from 'fastify';
 
 const server = fastify();
 
-server.get('/', () => {
+//GET
+server.get('/produtos', () => {
+    return 'Servidor ativo !'
+});
+
+// POST
+server.post('/produtos', () => {
+    return 'Servidor ativo !'
+});
+
+// PUT
+server.put('/produtos/:id', () => {
+    return 'Servidor ativo !'
+});
+
+// DELETE
+server.delete('/produtos/:id', () => {
     return 'Servidor ativo !'
 });
 
