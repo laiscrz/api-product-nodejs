@@ -2,7 +2,7 @@ import { randomUUID } from 'node:crypto'
 export class DatabaseMemory {
     #products = new Map();
 
-    list() {
+    list( search ) {
         return Array.from(this.#products.entries()).map((productsArray) => {
             const id = productsArray[0];
             const data = productsArray[1];
@@ -11,6 +11,13 @@ export class DatabaseMemory {
                 id,
                 ...data,
             }
+        })
+        .filter(product => {
+            if(search){
+                return product.name.includes(search);
+            }
+
+            return true;
         });
     }
 

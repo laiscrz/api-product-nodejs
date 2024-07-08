@@ -25,8 +25,9 @@ server.post('/products', (request, reply) => {
 });
 
 // GET all products
-server.get('/products', () => {
-    const products = database.list();
+server.get('/products', ( request ) => {
+    const search = request.query.search
+    const products = database.list(search);
     return products;
 });
 
