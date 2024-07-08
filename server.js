@@ -13,15 +13,15 @@ server.get('/products', () => {
 // POST
 // request body
 server.post('/products', (request, reply) => {
-    const body = request.body;
-    
+    const { name, description, manufacturer, category, price, available} = request.body;
+
     database.create({
-        name: "Produto 01",
-        description: "Descrição do Produto 01",
-        manufacturer: "XYZ Inc.",
-        category: "Eletrônicos",
-        price: 99.10,
-        available: true
+        name,
+        description,
+        manufacturer,
+        category,
+        price,
+        available
     });
 
     console.log(database.list());
