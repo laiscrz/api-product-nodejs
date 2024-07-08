@@ -8,7 +8,7 @@ const database = new DatabaseMemory();
 // POST
 // request body
 server.post('/products', (request, reply) => {
-    const { name, description, manufacturer, category, price, available} = request.body;
+    const { name, description, manufacturer, category, price, available } = request.body;
 
     database.create({
         name,
@@ -31,8 +31,21 @@ server.get('/products', () => {
 });
 
 // PUT
-server.put('/products/:id', () => {
-    return 'Servidor ativo !'
+server.put('/products/:id', (request, reply) => {
+    const productId = request.params.id;
+
+    const { name, description, manufacturer, category, price, available } = request.body;
+
+    database.update(productId, {
+        name,
+        description,
+        manufacturer,
+        category,
+        price,
+        available
+    });
+
+    return reply.status(204).send();
 });
 
 // DELETE

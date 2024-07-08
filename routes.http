@@ -14,3 +14,17 @@ Content-Type: application/json
 
 GET http://localhost:3000/products
 Content-Type: application/json
+
+###
+
+PUT http://localhost:3000/products/7372b064-c40a-4b22-8835-706caf45d941
+Content-Type: application/json
+
+{
+    "name": "Produto 01 - Atualizado",
+    "description": "Descrição do Produto 01",
+    "manufacturer": "XYZ Inc.",
+    "category": "Eletrônicos",
+    "price": 99.10,
+    "available": true
+}
