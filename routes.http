@@ -17,6 +17,11 @@ Content-Type: application/json
 
 ###
 
+GET http://localhost:3000/products/category?category=Eletrônicos
+Content-Type: application/json
+
+###
+
 PUT http://localhost:3000/products/1cf83be5-9113-48b9-89d3-6c1a4281e196
 Content-Type: application/json
 

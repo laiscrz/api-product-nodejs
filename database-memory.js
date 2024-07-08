@@ -7,11 +7,20 @@ export class DatabaseMemory {
             const id = productsArray[0];
             const data = productsArray[1];
 
-            return { 
-                id, 
-                ...data, 
+            return {
+                id,
+                ...data,
             }
         });
+    }
+
+    listByCategory(category) {
+        return Array.from(this.#products.entries()).map(([id, data]) => {
+            return {
+                id,
+                ...data,
+            };
+        }).filter(product => product.category === category);
     }
 
     create(product) {

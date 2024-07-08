@@ -24,9 +24,19 @@ server.post('/products', (request, reply) => {
     return reply.status(201).send(); // CREATED
 });
 
-//GET
+// GET all products
 server.get('/products', () => {
     const products = database.list();
+    return products;
+});
+
+// GET products by category
+server.get('/products/category', (request, reply) => {
+    const { category } = request.query;
+    if (!category) {
+        return reply.status(400).send({ error: 'Category query parameter is required' });
+    }
+    const products = database.listByCategory(category);
     return products;
 });
 
