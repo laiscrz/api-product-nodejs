@@ -2,8 +2,16 @@ import { randomUUID } from 'node:crypto'
 export class DatabaseMemory {
     #products = new Map();
 
-    list( ) {
-       return this.#products.values();
+    list() {
+        return Array.from(this.#products.entries()).map((productsArray) => {
+            const id = productsArray[0];
+            const data = productsArray[1];
+
+            return { 
+                id, 
+                ...data, 
+            }
+        });
     }
 
     create(product) {
