@@ -26,7 +26,7 @@ server.post('/products', (request, reply) => {
 
 //GET
 server.get('/products', () => {
-    const products = Array.from(database.list());
+    const products = database.list();
     return products;
 });
 
