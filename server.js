@@ -11,7 +11,10 @@ server.get('/products', () => {
 });
 
 // POST
+// request body
 server.post('/products', (request, reply) => {
+    const body = request.body;
+    
     database.create({
         name: "Produto 01",
         description: "Descrição do Produto 01",
