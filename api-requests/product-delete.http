@@ -1,0 +1,2 @@
+DELETE http://localhost:3000/products/1cf83be5-9113-48b9-89d3-6c1a4281e196
+Content-Type: application/json

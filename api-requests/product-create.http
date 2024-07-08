@@ -1,0 +1,11 @@
+POST http://localhost:3000/products
+Content-Type: application/json
+
+{
+    "name": "Produto 01",
+    "description": "Descrição do Produto 01",
+    "manufacturer": "XYZ Inc.",
+    "category": "Eletrônicos",
+    "price": 99.10,
+    "available": true
+}

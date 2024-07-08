@@ -1,0 +1,11 @@
+PUT http://localhost:3000/products/1cf83be5-9113-48b9-89d3-6c1a4281e196
+Content-Type: application/json
+
+{
+    "name": "Produto 01 - Atualizado",
+    "description": "Descrição do Produto 01",
+    "manufacturer": "XYZ Inc.",
+    "category": "Eletrônicos",
+    "price": 99.10,
+    "available": true
+}
