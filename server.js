@@ -5,11 +5,6 @@ const server = fastify();
 
 const database = new DatabaseMemory();
 
-//GET
-server.get('/products', () => {
-    return 'Servidor ativo !'
-});
-
 // POST
 // request body
 server.post('/products', (request, reply) => {
@@ -27,6 +22,12 @@ server.post('/products', (request, reply) => {
     console.log(database.list());
 
     return reply.status(201).send(); // CREATED
+});
+
+//GET
+server.get('/products', () => {
+    const products = Array.from(database.list());
+    return products;
 });
 
 // PUT
