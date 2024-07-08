@@ -17,7 +17,7 @@ Content-Type: application/json
 
 ###
 
-PUT http://localhost:3000/products/7372b064-c40a-4b22-8835-706caf45d941
+PUT http://localhost:3000/products/1cf83be5-9113-48b9-89d3-6c1a4281e196
 Content-Type: application/json
 
 {
@@ -28,3 +28,8 @@ Content-Type: application/json
     "price": 99.10,
     "available": true
 }
+
+###
+
+DELETE http://localhost:3000/products/1cf83be5-9113-48b9-89d3-6c1a4281e196
+Content-Type: application/json

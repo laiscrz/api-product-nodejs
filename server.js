@@ -49,8 +49,12 @@ server.put('/products/:id', (request, reply) => {
 });
 
 // DELETE
-server.delete('/products/:id', () => {
-    return 'Servidor ativo !'
+server.delete('/products/:id', ( request, reply) => {
+    const productId = request.params.id;
+
+    database.delete(productId);
+
+    return reply.status(204).send();
 });
 
 server.listen({
